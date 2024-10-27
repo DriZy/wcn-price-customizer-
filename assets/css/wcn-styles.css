@@ -1,0 +1,18 @@
+
+.original-price {
+    color: red;
+    font-size: 0.9em;
+    text-decoration: line-through;
+
+}
+
+.discounted-price {
+    color: green;
+    font-weight: bold;
+}
+
+.discount-info {
+    font-size: 0.9em;
+    color: #666;
+}
+
