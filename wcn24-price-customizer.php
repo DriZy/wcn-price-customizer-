@@ -21,7 +21,7 @@
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
 * Domain Path:       /languages
 * GitHub Plugin URI:
-* GitHub Branch:     master
+* GitHub Branch:     main
 */
 
 // If this file is called directly, abort.
@@ -48,13 +48,10 @@ class WCN_Custom_WooCommerce_Price_Display
         add_action('wp_enqueue_scripts', [$this, 'wcn_enqueue_styles']);
 
         add_filter('woocommerce_get_price_html', [$this, 'wcn_custom_price_display'], 100, 2);
-        add_filter('woocommerce_currency', [$this, 'wcn_change_currency_by_location'], 10);
+        add_filter('woocommerce_currency', [$this, 'wcn_change_currency_by_location'], 10, 2);
         add_filter('woocommerce_currency_symbol', [$this, 'wcn_change_currency_symbol_by_location'], 10, 2);
 
-
     }
-
-
 
     public function wcn_activate()
     {
